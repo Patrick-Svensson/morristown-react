@@ -1,0 +1,215 @@
+/* ***** Shopping Cart ***** */
+
+.cart-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cart__wrapper {
+    width: 90vw;
+    max-width: 120rem;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.cart__heading-wrapper {
+    width: 100%;
+    height: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cart__content-container {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cart__purchase {
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 2fr 0.2rem 1fr;
+    gap: 2rem;
+}
+
+.cart__img-container {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart__total {
+    font-weight: 700;
+}
+
+.cart__total-line {
+    background-color: rgb(34, 34, 34);
+}
+
+.cart__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0.1rem solid rgb(34, 34, 34);
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16),
+        0 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart__submit-wrapper {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart__terms {
+    width: 45rem;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cart__btn-checkout-container {
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.cart__checkbox-label {
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+#cartTerms {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.cart__btn {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16),
+        0 8px 8px rgba(0, 0, 0, 0.24);
+    text-decoration: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.cartTermsBtn {
+    font-size: 1.8rem;
+    padding: 1.5rem 3rem;
+    background-color: rgb(146, 146, 146);
+    color: rgb(245, 245, 245);
+    border: 0.05rem solid rgb(68, 68, 68);
+}
+
+.cartTermsBtn:hover {
+    background-color: rgb(131, 131, 131);
+    color: rgb(228, 228, 228);
+}
+.cartTermsBtn:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.24);
+}
+
+.cartCheckoutBtn {
+    font-size: 1.8rem;
+    padding: 1.5rem 3rem;
+    background-color: rgb(72, 121, 72);
+    color: rgb(207, 236, 207);
+    border: 0.05rem solid rgb(30, 61, 30);
+    opacity: 40%;
+}
+
+.cartCheckoutBtnActive {
+    opacity: 100%;
+}
+
+.cartCheckoutBtnActive:hover {
+    background-color: rgb(57, 102, 57);
+    color: rgb(179, 212, 179);
+}
+
+.cartCheckoutBtnActive:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.24);
+}
+
+/* ***** Media Queries ***** */
+
+@media screen and (max-width: 750px) {
+    .cart__content-container {
+        height: 50%;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cart__purchase {
+        width: 80%;
+        height: 40%;
+    }
+
+    .cart__img-container {
+        height: 40%;
+    }
+
+    .cart__submit-wrapper {
+        height: 18%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cart__btn-checkout-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cart__content-container {
+        height: 60%;
+        justify-content: space-around;
+    }
+
+    .cart__terms {
+        width: 28rem;
+    }
+
+    #CartTerms {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.5rem;
+    }
+
+    .cart__checkbox-label {
+        font-size: 1.6rem;
+    }
+
+    .cartCheckoutBtn,
+    .cartTermsBtn {
+        font-size: 1rem;
+        padding: 1.2rem 2.2rem;
+    }
+}
