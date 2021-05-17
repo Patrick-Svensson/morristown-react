@@ -36,7 +36,7 @@ const Cart = () => {
                 <div className="cart__submit-wrapper">
                     <div className="cart__terms">
                         <div className="cart__terms-accept">
-                            <input type="checkbox" id="cartTerms" onclick="checkoutBtnActive()" name="terms" />
+                            <input type="checkbox" id="cartTerms" onClick="checkoutBtnActive()" name="terms" />
                             <label className="cart__checkbox-label" for="terms">
                                 I ACCEPT TERMS
                             </label>

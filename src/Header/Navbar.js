@@ -4,9 +4,9 @@ import image from "../Assets/Images/mm-logo-react.svg";
 import { MdQueueMusic } from "react-icons/md";
 
 const Navbar = () => {
-    const [menu, setMenu] = useState(false);
-    const openMenu = () => setMenu(true);
-    const closeMenu = () => setMenu(false);
+    const [showMenu, setShowMenu] = useState(false);
+    const openMenu = () => setShowMenu(true);
+    const closeMenu = () => setShowMenu(false);
 
     return (
         <nav className="navbar">
@@ -15,7 +15,7 @@ const Navbar = () => {
             </a>
             <a
                 href="#"
-                className={menu ? "navbarToggler hide" : "navbarToggler"}
+                className={showMenu ? "navbarToggler hide" : "navbarToggler"}
                 aria-controls="navbarNav"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
@@ -23,8 +23,8 @@ const Navbar = () => {
             >
                 <MdQueueMusic />
             </a>
-            <div className={menu ? "navbar__link-container menu" : "navbar__link-container"}>
-                <ul className="navbar__link-wrapper">
+            <div className={showMenu ? "navbar__link-wrapper slide" : "navbar__link-wrapper"}>
+                <ul>
                     <li className="navbar__link">
                         <a className="navbar__link--item navbar__link--close" href="#" onClick={closeMenu}>
                             &#215;

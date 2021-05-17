@@ -31,16 +31,7 @@
     visibility: hidden;
 }
 
-/* ***** Navigation Dropdown Menu ***** */
-
-.navbar__link-container {
-    display: none;
-}
-
-.navbar__link-container.menu {
-    display: block;
-    z-index: 1;
-}
+/* ***** Navigation Slide In Menu ***** */
 
 .navbar__link-wrapper {
     height: 100vh;
@@ -49,9 +40,21 @@
     text-align: left;
     background-color: rgb(34, 34, 34);
     padding-right: 1rem;
-    position: absolute;
+    position: fixed;
     top: 8rem;
+    right: -25vw;
+    transition: all 500ms ease-in-out;
+    z-index: 1;
+}
+
+.navbar__link-wrapper.slide {
     right: 0;
+}
+
+.navbar__link-wrapper.slideIn {
+    display: block;
+    animation: slideIn 0.5s linear forwards;
+    z-index: 1;
 }
 
 .navbar__link {
