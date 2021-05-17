@@ -1,5 +1,6 @@
 import "./navbar.css";
 import image from "../Assets/Images/mm-logo-react.svg";
+import { MdQueueMusic } from "react-icons/md";
 
 const Navbar = () => {
     return (
@@ -8,13 +9,8 @@ const Navbar = () => {
                 <img className="navbar__logo-container" src={image} />
             </a>
             <a className="navbar__toggler" href="#">
-                <span>
-                    <i
-                        className="fas fa-align-justify"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    ></i>
+                <span className="navbarToggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <MdQueueMusic />
                 </span>
             </a>
             <div className="navbar__link-container" id="navDropdownMenu">
