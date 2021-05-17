@@ -9,12 +9,12 @@ const Navbar = () => {
     const closeMenu = () => setShowMenu(false);
 
     return (
-        <nav className="navbar">
-            <a href="#">
-                <img className="navbar__logo-container" src={image} />
+        <nav className="navbar" id="currentPage">
+            <a href="#currentPage">
+                <img className="navbar__logo-container" src={image} alt="Company Logo" />
             </a>
             <a
-                href="#"
+                href="#currentPage"
                 className={showMenu ? "navbarToggler hide" : "navbarToggler"}
                 aria-controls="navbarNav"
                 aria-expanded="false"
@@ -26,32 +26,32 @@ const Navbar = () => {
             <div className={showMenu ? "navbar__link-wrapper slide" : "navbar__link-wrapper"}>
                 <ul>
                     <li className="navbar__link">
-                        <a className="navbar__link--item navbar__link--close" href="#" onClick={closeMenu}>
+                        <a className="navbar__link--item navbar__link--close" href="#currentPage" onClick={closeMenu}>
                             &#215;
                         </a>
                     </li>
                     <li className="navbar__link">
-                        <a className="navbar__link--item" href="#">
+                        <a className="navbar__link--item" href="#currentPage">
                             A-style
                         </a>
                     </li>
                     <li className="navbar__link">
-                        <a className="navbar__link--item" href="#">
+                        <a className="navbar__link--item" href="#currentPage">
                             F-style
                         </a>
                     </li>
                     <li className="navbar__link">
-                        <a className="navbar__link--item" href="#">
+                        <a className="navbar__link--item" href="#currentPage">
                             View Cart
                         </a>
                     </li>
                     <li className="navbar__link">
-                        <a className="navbar__link--item" href="#">
+                        <a className="navbar__link--item" href="#currentPage">
                             About Us
                         </a>
                     </li>
                     <li className="navbar__link">
-                        <a className="navbar__link--item" href="#">
+                        <a className="navbar__link--item" href="#currentPage">
                             Contact Us
                         </a>
                     </li>
