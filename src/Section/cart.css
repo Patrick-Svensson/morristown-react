@@ -142,16 +142,16 @@
     opacity: 40%;
 }
 
-.cartCheckoutBtnActive {
+.cartCheckoutBtn.Active {
     opacity: 100%;
 }
 
-.cartCheckoutBtnActive:hover {
+.cartCheckoutBtn.Active:hover {
     background-color: rgb(57, 102, 57);
     color: rgb(179, 212, 179);
 }
 
-.cartCheckoutBtnActive:active {
+.cartCheckoutBtn.Active:active {
     transform: scale(0.98);
     box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.24);
 }

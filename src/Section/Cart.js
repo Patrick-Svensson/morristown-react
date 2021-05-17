@@ -3,6 +3,9 @@ import "./cart.css";
 import image from "../Assets/Images/mandolin-react.jpg";
 
 const Cart = () => {
+    const [checked, setChecked] = useState(false);
+    const activateCheckOutBtn = () => setChecked(!checked);
+
     return (
         <div className="cart-container">
             <div className="cart__wrapper">
@@ -36,15 +39,15 @@ const Cart = () => {
                 <div className="cart__submit-wrapper">
                     <div className="cart__terms">
                         <div className="cart__terms-accept">
-                            <input type="checkbox" id="cartTerms" onClick="checkoutBtnActive()" name="terms" />
-                            <label className="cart__checkbox-label" for="terms">
-                                I ACCEPT TERMS
-                            </label>
+                            <input type="checkbox" id="cartTerms" onClick={activateCheckOutBtn} />
+                            <label className="cart__checkbox-label">I ACCEPT TERMS</label>
                         </div>
                         <button className="cart__btn cartTermsBtn">READ TERMS</button>
                     </div>
                     <div className="cart__btn-checkout-container">
-                        <button className="cart__btn cartCheckoutBtn">TO CHECKOUT</button>
+                        <button className={checked ? "cart__btn cartCheckoutBtn Active" : "cart__btn cartCheckoutBtn"}>
+                            TO CHECKOUT
+                        </button>
                     </div>
                 </div>
             </div>
