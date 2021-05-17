@@ -17,16 +17,18 @@
     background-color: rgb(185, 185, 185);
 }
 
-.navbar__toggler {
+.navbarToggler {
     margin-right: 4rem;
     position: absolute;
     top: 2rem;
     right: 1rem;
+    display: inline-block;
+    font-size: 5rem;
+    color: rgb(34, 34, 34);
 }
 
-.navbarToggler {
-    font-size: 4rem;
-    color: rgb(34, 34, 34);
+.navbarToggler.hide {
+    visibility: hidden;
 }
 
 /* ***** Navigation Dropdown Menu ***** */

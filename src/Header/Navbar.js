@@ -1,22 +1,32 @@
+import { useState } from "react";
 import "./navbar.css";
 import image from "../Assets/Images/mm-logo-react.svg";
 import { MdQueueMusic } from "react-icons/md";
 
 const Navbar = () => {
+    const [menu, setMenu] = useState(false);
+    const openMenu = () => setMenu(true);
+    const closeMenu = () => setMenu(false);
+
     return (
         <nav className="navbar">
             <a href="#">
                 <img className="navbar__logo-container" src={image} />
             </a>
-            <a className="navbar__toggler" href="#">
-                <span className="navbarToggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <MdQueueMusic />
-                </span>
+            <a
+                href="#"
+                className={menu ? "navbarToggler hide" : "navbarToggler"}
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                onClick={openMenu}
+            >
+                <MdQueueMusic />
             </a>
-            <div className="navbar__link-container" id="navDropdownMenu">
-                <ul className="navbar__link-wrapper animate__animated">
+            <div className={menu ? "navbar__link-container menu" : "navbar__link-container"}>
+                <ul className="navbar__link-wrapper">
                     <li className="navbar__link">
-                        <a className="navbar__link--item navbar__link--close" href="#">
+                        <a className="navbar__link--item navbar__link--close" href="#" onClick={closeMenu}>
                             &#215;
                         </a>
                     </li>
