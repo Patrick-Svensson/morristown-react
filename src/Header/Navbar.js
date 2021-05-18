@@ -4,6 +4,7 @@ import image from "../Assets/Images/mm-logo-react.svg";
 import { MdQueueMusic } from "react-icons/md";
 
 const Navbar = () => {
+    // Toggle menu.
     const [showMenu, setShowMenu] = useState(false);
     const openMenu = () => setShowMenu(true);
     const closeMenu = () => setShowMenu(false);

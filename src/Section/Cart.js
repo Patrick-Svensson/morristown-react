@@ -3,8 +3,10 @@ import "./cart.css";
 import image from "../Assets/Images/mandolin-react.jpg";
 
 const Cart = () => {
+    // Activate checkout button when checkbox is checked.
     const [checked, setChecked] = useState(false);
     const activateCheckOutBtn = () => setChecked(!checked);
+    // Toggle terms modal.
     const [termsClicked, setTermsClicked] = useState(false);
     const activateModal = () => setTermsClicked(true);
     const closeModal = () => setTermsClicked(false);
@@ -56,6 +58,7 @@ const Cart = () => {
                     </div>
                 </div>
             </div>
+            // ***** Modal *****
             <div className={termsClicked ? "modal-container ActivateModalContainer" : "modal-container"} onClick={closeModal}>
                 <div className="modal">
                     <div className="modal__X-wrapper" onClick={closeModal}>
