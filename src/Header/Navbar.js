@@ -41,7 +41,7 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li className="navbar__link">
-                        <a className="navbar__link--item" href="#currentPage">
+                        <a className="navbar__link--item" href="#currentPage" onClick={closeMenu}>
                             View Cart
                         </a>
                     </li>

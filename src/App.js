@@ -1,14 +1,14 @@
 import Navbar from "./Header/Navbar";
 import Section from "./Section/Cart";
-import Modal from "./Modal/Modal";
 
 function App() {
     return (
-        <header>
-            <Navbar />
+        <>
+            <header>
+                <Navbar />
+            </header>
             <Section />
-            <Modal />
-        </header>
+        </>
     );
 }
 
