@@ -20,10 +20,10 @@
 .navbarToggler {
     margin-right: 4rem;
     position: absolute;
-    top: 2rem;
-    right: 1rem;
+    top: 1.5rem;
+    right: 0;
     display: inline-block;
-    font-size: 5rem;
+    font-size: 6.2rem;
     color: rgb(34, 34, 34);
 }
 
@@ -49,12 +49,6 @@
 
 .navbar__link-wrapper.slide {
     right: 0;
-}
-
-.navbar__link-wrapper.slideIn {
-    display: block;
-    animation: slideIn 0.5s linear forwards;
-    z-index: 1;
 }
 
 .navbar__link {
