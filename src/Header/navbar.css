@@ -42,7 +42,7 @@
     padding-right: 1rem;
     position: fixed;
     top: 8rem;
-    right: -25vw;
+    right: -100vw;
     transition: all 500ms ease-in-out;
     z-index: 1;
 }
