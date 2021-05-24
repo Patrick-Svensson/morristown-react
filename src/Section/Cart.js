@@ -8,8 +8,6 @@ const Cart = () => {
     const activateCheckOutBtn = () => setChecked(!checked);
     /* Toggle terms modal. */
     const [termsClicked, setTermsClicked] = useState(false);
-    const activateModal = () => setTermsClicked(true);
-    const closeModal = () => setTermsClicked(false);
 
     return (
         <div className="cart-container">
@@ -47,7 +45,7 @@ const Cart = () => {
                             <input type="checkbox" id="cartTerms" onClick={activateCheckOutBtn} />
                             <label className="cart__checkbox-label">I ACCEPT TERMS</label>
                         </div>
-                        <button className="cart__btn cartTermsBtn" onClick={activateModal}>
+                        <button className="cart__btn cartTermsBtn" onClick={() => setTermsClicked(true)}>
                             READ TERMS
                         </button>
                     </div>
@@ -59,9 +57,12 @@ const Cart = () => {
                 </div>
             </div>
             {/* ***** Modal ***** */}
-            <div className={termsClicked ? "modal-container ActivateModalContainer" : "modal-container"} onClick={closeModal}>
+            <div
+                className={termsClicked ? "modal-container ActivateModalContainer" : "modal-container"}
+                onClick={() => setTermsClicked(false)}
+            >
                 <div className="modal">
-                    <div className="modal__X-wrapper" onClick={closeModal}>
+                    <div className="modal__X-wrapper" onClick={() => setTermsClicked(false)}>
                         <span className="modal__X">&#215;</span>
                     </div>
                     <h2 className="modal__heading">Terms and Conditions</h2>

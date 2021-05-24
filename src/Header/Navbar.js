@@ -6,8 +6,6 @@ import { MdQueueMusic } from "react-icons/md";
 const Navbar = () => {
     /* Toggle menu. */
     const [showMenu, setShowMenu] = useState(false);
-    const openMenu = () => setShowMenu(true);
-    const closeMenu = () => setShowMenu(false);
 
     return (
         <nav className="navbar" id="currentPage">
@@ -20,14 +18,18 @@ const Navbar = () => {
                 aria-controls="navbarNav"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
-                onClick={openMenu}
+                onClick={() => setShowMenu(true)}
             >
                 <MdQueueMusic />
             </a>
             <div className={showMenu ? "navbar__link-wrapper slide" : "navbar__link-wrapper"}>
                 <ul>
                     <li className="navbar__link">
-                        <a className="navbar__link--item navbar__link--close" href="#currentPage" onClick={closeMenu}>
+                        <a
+                            className="navbar__link--item navbar__link--close"
+                            href="#currentPage"
+                            onClick={() => setShowMenu(false)}
+                        >
                             &#215;
                         </a>
                     </li>
@@ -42,7 +44,7 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li className="navbar__link">
-                        <a className="navbar__link--item" href="#currentPage" onClick={closeMenu}>
+                        <a className="navbar__link--item" href="#currentPage" onClick={() => setShowMenu(false)}>
                             View Cart
                         </a>
                     </li>
